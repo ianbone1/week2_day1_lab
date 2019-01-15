@@ -9,26 +9,25 @@ class Book
   # }
 
 
-  attr_reader :book
+  attr_reader :details
 
   def initialize(title)
-    @book = {title: title,
+    @details = {title: title,
       rental_details: {
         student_name: "",
         date: ""}}
-      end
+  end
 
-      def get_title
-        # binding.pry
-        return @book[:title]
-      end
+  def get_title
+    return @details[:title]
+  end
 
-      def get_rental_details
-        return @book[:rental_details]
-      end
+  def get_rental_details
+    return @details[:rental_details]
+  end
 
-      def set_rental_details(student, the_date)
-        @book[:rental_details] = {student_name: student, date: the_date}
-      end
+  def set_rental_details(student, the_date)
+    @details[:rental_details] = {student_name: student, date: the_date}
+  end
 
-    end
+end

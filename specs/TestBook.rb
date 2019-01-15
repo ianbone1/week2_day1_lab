@@ -32,7 +32,7 @@ class TestBook < Minitest::Test
     expected = {title: "The Lord Of The Rings",
       rental_details: {student_name: "Ian",
         date: "1/3/2019"}}
-        assert_equal(expected, book1.book)
+        assert_equal(expected, book1.details)
       end
 
       def test_create_library_and_find_book
@@ -74,8 +74,8 @@ class TestBook < Minitest::Test
         library = Library.new(book1)
         library.add_book(book2)
         library.add_book(book3)
-        expected = book1.book
-        assert_equal(expected, library.get_book("The Lord Of The Rings").book)
+        expected = book1.details 
+        assert_equal(expected, library.get_book("The Lord Of The Rings").details)
       end
 
       def test_set_book_rental_details

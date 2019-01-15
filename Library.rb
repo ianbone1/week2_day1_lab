@@ -4,9 +4,9 @@ require_relative('./Book.rb')
 
 class Library
 
-  def initialize(book)
+  def initialize(first_book)
     @library = []
-    @library << book
+    @library << first_book 
   end
 
   def add_book(book_to_add)
@@ -23,7 +23,7 @@ class Library
 
   def get_book_rental_details(book_title)
     the_book = get_book(book_title)
-    # binding.pry
+# binding.pry
     return the_book[:rental_details] unless the_book == nil
     return nil
   end
