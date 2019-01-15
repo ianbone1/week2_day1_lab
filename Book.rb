@@ -13,9 +13,9 @@ class Book
 
   def initialize(title)
     @details = {title: title,
-      rental_details: {
-        student_name: "",
-        date: ""}}
+                rental_details: {
+                  student_name: "",
+                  date: ""}}
   end
 
   def get_title
